@@ -15,7 +15,6 @@
 		var defaults = {
 			'class_name'   : 'caption',  // Class name assigned to each <figure>
 			'schema'       : false,		 // User schema.org markup (i.e., itemtype, itemprop)
-			'use_data_attr': false,		 // Get the caption text from a data-caption attribute instead of the alt text
 			'debug_mode'   : false       // Output debug info to the JS console
 		}
 
@@ -29,7 +28,7 @@
 
 			// Form basic structures and assign vars
 			var $this = $(this);  // The image
-			var $caption = !options.use_data_attr ? $this.attr('alt') : $this.data('caption');
+			var $caption = $this.data('caption') ? $this.data('caption') : $this.attr('alt');
 
 			if (options.debug_mode) console.log('caption.js | Caption: ' + $caption);
 
