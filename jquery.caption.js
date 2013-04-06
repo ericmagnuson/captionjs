@@ -14,7 +14,7 @@
 		// Default values for options
 		var defaults = {
 			'class_name'   : 'caption',  // Class name assigned to each <figure>
-			'schema'       : false,		 // User schema.org markup (i.e., itemtype, itemprop)
+			'schema'       : false,		 // COMING SOON - Use schema.org markup (i.e., itemtype, itemprop)
 			'debug_mode'   : false       // Output debug info to the JS console
 		}
 
