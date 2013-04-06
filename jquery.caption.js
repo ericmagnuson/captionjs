@@ -6,7 +6,7 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v.0.9.0
+ * v0.9.0
  * Date: 2013-3-31
  */
 (function($, window, undefined){
