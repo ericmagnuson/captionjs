@@ -6,16 +6,16 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v0.9.0
- * Date: 2013-3-31
+ * v0.9.1
+ * Date: 2013-09-09
  */
 (function($, window, undefined){
 	$.fn.captionjs = function(opts){
 		// Default values for options
 		var defaults = {
-			'class_name'   : 'caption',  // Class name assigned to each <figure>
-			'schema'       : false,		 // COMING SOON - Use schema.org markup (i.e., itemtype, itemprop)
-			'debug_mode'   : false       // Output debug info to the JS console
+			'class_name' : 'caption',  // Class name assigned to each <figure>
+			'schema'     : true,       // Use schema.org markup (i.e., itemtype, itemprop)
+			'debug_mode' : false       // Output debug info to the JS console
 		}
 
 		// Extend the options from defaults with user's options
@@ -37,6 +37,17 @@
 
 			// Set width of the figure, our top-most container for caption.js.
 			$figure.width($this.outerWidth());
+
+			// Schema markup if enabled
+			if (options.schema === true)
+			{
+				$figure.attr({
+					'itemscope': 'itemscope',
+					'itemtype': 'http://schema.org/Photograph'
+				});
+				$figcaption.attr('itemprop', 'name');
+				$this.attr('itemprop', 'image');
+			}
 		});
 	};
 })(jQuery, window);
