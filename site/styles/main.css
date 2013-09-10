@@ -1,0 +1,290 @@
+body {
+	font-family: 'Lora', serif;
+	font-size: 16px;
+	min-width: 720px;
+	position: relative;
+}
+header, nav, article, footer, section, aside, figure, figcaption {display:block;}
+.l {float: left;}
+.r {float: right;}
+.js header, .js #github, .js nav, .js body > div, .js footer {
+	display: none;
+}
+.wrapper {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.captionjs {
+	font-family: 'Abril Fatface', cursive;
+	font-weight: normal;
+}
+header {
+	margin: 60px 0 75px 0;
+}
+header h1 {
+	font-family: 'Abril Fatface', cursive;
+	font-size: 90px;
+}
+header h1 .char2,  {
+	vertical-align: top;
+	margin-left: -0.022em;
+}
+header h1 .char3 {
+	vertical-align: top;
+	margin-left: -0.050em;
+}
+header h1 .char4 {
+	vertical-align: top;
+	margin-left: -0.040em;
+}
+header h1 .char5 {
+	vertical-align: top;
+	margin-left: -0.033em;
+}
+header h1 .char6 {
+	vertical-align: top;
+	margin-left: -0.056em;
+}
+header h1 .char7 {
+	vertical-align: top;
+	margin-left: -0.056em;
+}
+header h1 .char8 {
+	vertical-align: top;
+	margin-left: -0.011em;
+	display: inline-block;
+	position: relative;
+	top: -0.16em;
+}
+header h1 .char9 {
+	vertical-align: top;
+	margin-left: -0.025em;
+}
+header h1 .char10 {
+	vertical-align: top;
+	margin-left: -0.064em;
+	display: inline-block;
+	position: relative;
+	top: 0.01em;
+}
+.captionjs {
+	text-shadow: #fff 0 -1px 0;
+}
+.captionjs .char2,  {
+	margin-left: -0.012em;
+}
+.captionjs .char3 {
+	margin-left: -0.040em;
+}
+.captionjs .char4 {
+	margin-left: -0.030em;
+}
+.captionjs .char5 {
+	margin-left: -0.033em;
+}
+.captionjs .char6 {
+	margin-left: -0.036em;
+}
+.captionjs .char7 {
+	margin-left: -0.036em;
+}
+.captionjs .char8 {
+	margin-left: -0.011em;
+	display: inline-block;
+	position: relative;
+	top: -0.16em;
+}
+.captionjs .char9 {
+	margin-left: -0.025em;
+}
+.captionjs .char10 {
+	margin-left: -0.04em;
+	display: inline-block;
+	position: relative;
+	top: 0.01em;
+}
+header h2 {
+	margin-top: 15px;
+	font-size: 18px;
+	font-style: italic;
+	color: #999;
+}
+nav {
+	margin-bottom: 70px;
+}
+nav > div > div {
+	border-top: 1px dashed #999;
+	border-bottom: 1px dashed #999;
+}
+nav > div > div a {
+	display: block;
+	height: 43px;
+	line-height: 44px;
+}
+nav.sticky > div {
+	box-shadow: #fff 0 10px 10px;
+	background-color: #fff;
+	width: 800px;
+	margin: 0 auto;
+	margin-left: -50px;
+	position: fixed;
+	top: 0;
+	z-index: 50;
+}
+nav.sticky > div > div {
+	margin-left: 50px;
+	width: 700px;
+}
+nav ul li {
+	display: inline-block;
+	margin-right: 40px;
+}
+nav ul li.r {
+	display: none;
+	margin-right: 0;
+	margin-left: 25px;
+}
+nav.sticky ul li.r {
+	display: inline-block;
+}
+nav ul li a {
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	-webkit-transition: 0.2s linear color, 0.2s linear text-shadow;
+	-moz-transition   : 0.2s linear color, 0.2s linear text-shadow;
+	-ms-transition    : 0.2s linear color, 0.2s linear text-shadow;
+	-o-transition     : 0.2s linear color, 0.2s linear text-shadow;
+	transition        : 0.2s linear color, 0.2s linear text-shadow;
+}
+nav ul li a:hover {
+	color:#709f00;
+	text-shadow: #caff58 0 -1px 0;
+}
+body > div h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+body > div p {
+	margin-bottom: 1.6em;
+	font-size: 17px;
+	line-height: 1.6em;
+}
+body > div p + h2 {
+	margin-top: 3.2em;
+}
+code {
+	background-color: #eee;
+	border: 1px dashed #d9d9d9;
+	padding: 3px 0;
+	font-size: 0.96em;
+}
+abbr {
+	cursor: help;
+	border-bottom: 1px dashed #ccc;
+}
+footer {
+	border-top: 1px dashed #999;
+	padding: 18px 0;
+}
+body > div p a {
+	color: #000;
+	position: relative;
+	-webkit-transition: 0.2s linear top;
+	-moz-transition   : 0.2s linear top;
+	-ms-transition    : 0.2s linear top;
+	-o-transition     : 0.2s linear top;
+	transition        : 0.2s linear top;
+}
+body > div p a:hover {
+	top: -2px;
+}
+
+
+
+#download {
+	text-decoration: none;
+}
+#download button {
+  margin: 0 0 20px;
+  padding: 10px 24px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'myriad-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  border-bottom: none;
+  border-top: 1px solid #3fc100;
+  background: #6ed600;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3fc100), color-stop(0.9, #6ed600));
+  background: -ms-linear-gradient(bottom, #3fc100, #6ed600);
+  background: -moz-linear-gradient(center bottom, #3fc100 0%, #6ed600 90%);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-text-shadow: 0 -1px 0 #277d00;
+  -moz-text-shadow: 0 -1px 0 #277d00;
+  -ms-text-shadow: 0 -1px 0 #277d00;
+  -o-text-shadow: 0 -1px 0 #277d00;
+  text-shadow: 0 -1px 0 #277d00;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: #319a00 0 4px 0;
+  -moz-box-shadow: #319a00 0 4px 0;
+  -ms-box-shadow: #319a00 0 4px 0;
+  -o-box-shadow: #319a00 0 4px 0;
+  box-shadow: #319a00 0 4px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+#download button:hover,
+#download button:focus {
+  outline: none;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3ec700), color-stop(0.9, #69e300));
+  background: -ms-linear-gradient(bottom, #3ec700, #69e300);
+  background: -moz-linear-gradient(center bottom, #3ec700 0%, #69e300 90%);
+  -webkit-box-shadow: #2fa000 0 4px 0;
+  -moz-box-shadow: #2fa000 0 4px 0;
+  -ms-box-shadow: #2fa000 0 4px 0;
+  -o-box-shadow: #2fa000 0 4px 0;
+  box-shadow: #2fa000 0 4px 0;
+}
+#download button:active {
+  position: relative;
+  top: 3px;
+  border-top: 1px solid #37c400;
+  -webkit-box-shadow: #2fa000 0 1px 0;
+  -moz-box-shadow: #2fa000 0 1px 0;
+  -ms-box-shadow: #2fa000 0 1px 0;
+  -o-box-shadow: #2fa000 0 1px 0;
+  box-shadow: #2fa000 0 1px 0;
+}
+
+
+/* Since the whole page is hidden on load, we can't get the width of the image
+   automatically with jQuery, so we set it here. */
+img.caption {
+	width: 700px;
+}
+
+
+div .syntaxhighlighter {
+	font-size: auto;
+}
