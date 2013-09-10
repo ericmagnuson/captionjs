@@ -15,6 +15,8 @@
 		var defaults = {
 			'class_name' : 'caption',  // Class name assigned to each <figure>
 			'schema'     : true,       // Use schema.org markup (i.e., itemtype, itemprop)
+			'stacked'    : false,      // Place the caption on top of the photo
+			'animated'   : false,      // Show the animation on hover only ('stacked' must also be enabled)
 			'debug_mode' : false       // Output debug info to the JS console
 		}
 
@@ -27,13 +29,12 @@
 			if (options.debug_mode) console.log('caption.js | Starting.');
 
 			// Form basic structures and assign vars
-			var $this = $(this);  // The image
-			var $caption = $this.data('caption') ? $this.data('caption') : $this.attr('alt');
+			var $this       = $(this),  // The image
+				$caption    = $this.data('caption') ? $this.data('caption') : $this.attr('alt'),
+				$figure     = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent(),
+				$figcaption = $this.next('figcaption').html($caption);
 
 			if (options.debug_mode) console.log('caption.js | Caption: ' + $caption);
-
-			var $figure = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent();
-			var $figcaption = $this.next('figcaption').html($caption);
 
 			// Set width of the figure, our top-most container for caption.js.
 			$figure.width($this.outerWidth());
@@ -43,10 +44,28 @@
 			{
 				$figure.attr({
 					'itemscope': 'itemscope',
-					'itemtype': 'http://schema.org/Photograph'
+					'itemtype':  'http://schema.org/Photograph'
 				});
 				$figcaption.attr('itemprop', 'name');
 				$this.attr('itemprop', 'image');
+			}
+
+			// Stack caption on photo if enabled
+			if (options.stacked === true)
+			{
+				$figure.addClass('stacked').css('position', 'relative');
+				$figcaption.css({
+					'position': 'absolute',
+					'bottom': '0',
+					'margin-bottom': '0',
+				});
+			}
+
+			// Animate if enabled
+			if ((options.animated && options.stacked) === true)
+			{
+				$figure.addClass('animated').css('overflow', 'hidden');
+				$figcaption.css('bottom', -$figcaption.outerHeight());
 			}
 		});
 	};

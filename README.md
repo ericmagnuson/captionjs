@@ -3,4 +3,4 @@ caption.js
 
 easily and semantically add captions to images
 
-##### *by [eric magnuson](http://ericmagnuson.me)*
+For documentation, please see [captionjs.com](http://captionjs.com).
