@@ -1,0 +1,14 @@
+figure, figcaption {
+	line-height: 0;
+}
+.stacked.animated figcaption {
+	bottom: 0;
+	-webkit-transition: 0.25s bottom;
+	-moz-transition:    0.25s bottom;
+	-ms-transition:     0.25s bottom;
+	-o-transition:      0.25s bottom;
+	transition:         0.25s bottom;
+}
+.animated:hover figcaption {
+	bottom: 0 !important;
+}
