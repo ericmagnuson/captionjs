@@ -34,6 +34,9 @@
 				$figure     = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent(),
 				$figcaption = $this.next('figcaption').html($caption);
 
+			// If no caption is supplied, just remove the figcaption.
+			if ($caption === '') $figcaption.remove();
+
 			if (options.debug_mode) console.log('caption.js | Caption: ' + $caption);
 
 			// Set width of the figure, our top-most container for caption.js.
