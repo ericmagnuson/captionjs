@@ -6,18 +6,17 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v0.9.2
- * Date: 2013-09-09
+ * v0.9.3
+ * Date: 2013-09-10
  */
 (function($, window, undefined){
 	$.fn.captionjs = function(opts){
 		// Default values for options
 		var defaults = {
-			'class_name' : 'caption',  // Class name assigned to each <figure>
-			'schema'     : true,       // Use schema.org markup (i.e., itemtype, itemprop)
-			'stacked'    : false,      // Place the caption on top of the photo
-			'animated'   : false,      // Show the animation on hover only ('stacked' must also be enabled)
-			'debug_mode' : false       // Output debug info to the JS console
+			'class_name' : 'captionjs',  // Class name assigned to each <figure>
+			'schema'     : true,         // Use schema.org markup (i.e., itemtype, itemprop)
+			'mode'       : 'default',    // default | static | animated | hide
+			'debug_mode' : false         // Output debug info to the JS console
 		}
 
 		// Extend the options from defaults with user's options
@@ -25,7 +24,7 @@
 
 		// jQuery chainability
 		return this.each(function(){
-			// Do logic here.
+			// Do the magic here.
 			if (options.debug_mode) console.log('caption.js | Starting.');
 
 			// Form basic structures and assign vars
@@ -53,23 +52,39 @@
 				$this.attr('itemprop', 'image');
 			}
 
-			// Stack caption on photo if enabled
-			if (options.stacked === true)
+			// Stacked mode
+			if (options.mode === 'stacked')
 			{
-				$figure.addClass('stacked').css('position', 'relative');
+				$figure.addClass('stacked');
 				$figcaption.css({
 					'position': 'absolute',
-					'bottom': '0',
 					'margin-bottom': '0',
+					'bottom': '0',
 				});
 			}
 
-			// Animate if enabled
-			if ((options.animated && options.stacked) === true)
+			// Animated mode
+			if (options.mode === 'animated')
 			{
-				$figure.addClass('animated').css('overflow', 'hidden');
-				$figcaption.css('bottom', -$figcaption.outerHeight());
+				$figure.addClass('animated');
+				$figcaption.css({
+					'position': 'absolute',
+					'margin-bottom': '0',
+					'bottom': -$figcaption.outerHeight(),
+				});
 			}
+
+			// Hide mode
+			if (options.mode === 'hide')
+			{
+				$figure.addClass('hide');
+				$figcaption.css({
+					'position': 'absolute',
+					'margin-bottom': $figcaption.outerHeight(),
+					'bottom': -$figcaption.outerHeight(),
+				});
+			}
+
 		});
 	};
 })(jQuery, window);

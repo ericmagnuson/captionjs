@@ -1,7 +1,7 @@
-figure, figcaption {
+.captionjs, .captionjs figcaption {
 	line-height: 0;
 }
-figcaption {
+.captionjs figcaption {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
 	-ms-box-sizing:     border-box;
@@ -10,14 +10,36 @@ figcaption {
 
 	width: 100%;
 }
-.stacked.animated figcaption {
+
+.captionjs.stacked figcaption {
 	bottom: 0;
+}
+
+.captionjs.stacked,
+.captionjs.animated,
+.captionjs.hide {
+	position: relative;
+	overflow: hidden;
+}
+
+.captionjs.animated figcaption {
 	-webkit-transition: 0.25s bottom;
 	-moz-transition:    0.25s bottom;
 	-ms-transition:     0.25s bottom;
 	-o-transition:      0.25s bottom;
 	transition:         0.25s bottom;
 }
-.animated:hover figcaption {
+.captionjs.animated:hover figcaption {
 	bottom: 0 !important;
+}
+
+.captionjs.hide figcaption {
+	-webkit-transition: 0.25s margin-bottom;
+	-moz-transition:    0.25s margin-bottom;
+	-ms-transition:     0.25s margin-bottom;
+	-o-transition:      0.25s margin-bottom;
+	transition:         0.25s margin-bottom;
+}
+.captionjs.hide:hover figcaption {
+	margin-bottom: 0 !important;
 }
