@@ -15,7 +15,7 @@ header, nav, article, footer, section, aside, figure, figcaption {display:block;
 	margin-left: auto;
 	margin-right: auto;
 }
-.captionjs {
+.captionjs_span {
 	font-family: 'Abril Fatface', cursive;
 	font-weight: normal;
 }
@@ -68,41 +68,44 @@ header h1 .char10 {
 	position: relative;
 	top: 0.01em;
 }
-.captionjs {
+.captionjs_span {
 	text-shadow: #fff 0 -1px 0;
 }
-.captionjs .char2,  {
+.captionjs_span .char2,  {
 	margin-left: -0.012em;
 }
-.captionjs .char3 {
+.captionjs_span .char3 {
 	margin-left: -0.040em;
 }
-.captionjs .char4 {
+.captionjs_span .char4 {
 	margin-left: -0.030em;
 }
-.captionjs .char5 {
+.captionjs_span .char5 {
 	margin-left: -0.033em;
 }
-.captionjs .char6 {
+.captionjs_span .char6 {
 	margin-left: -0.036em;
 }
-.captionjs .char7 {
+.captionjs_span .char7 {
 	margin-left: -0.036em;
 }
-.captionjs .char8 {
+.captionjs_span .char8 {
 	margin-left: -0.011em;
 	display: inline-block;
 	position: relative;
 	top: -0.16em;
 }
-.captionjs .char9 {
+.captionjs_span .char9 {
 	margin-left: -0.025em;
 }
-.captionjs .char10 {
+.captionjs_span .char10 {
 	margin-left: -0.04em;
 	display: inline-block;
 	position: relative;
 	top: 0.01em;
+}
+p em {
+	font-style: italic;
 }
 header h2 {
 	margin-top: 15px;
@@ -282,9 +285,4 @@ body > div p a:hover {
    automatically with jQuery, so we set it here. */
 img.caption {
 	width: 700px;
-}
-
-
-div .syntaxhighlighter {
-	font-size: auto;
 }

@@ -15,7 +15,7 @@ $(document).ready(function() {
 	// Stylize "caption.js"
 	$("p:contains('caption.js'), h2 a:contains('caption.js')", document.body).contents().each(function() {
 		if (this.nodeType == 3)
-			$(this).replaceWith(this.nodeValue.replace(/caption.js/g, "<span class=\"captionjs\">caption.js</span>"));
+			$(this).replaceWith(this.nodeValue.replace(/caption.js/g, "<span class=\"captionjs_span\">caption.js</span>"));
 	});
 
 	$("header h1, .captionjs").lettering();
