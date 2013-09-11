@@ -29,9 +29,9 @@
 
 			// Form basic structures and assign vars
 			var $this       = $(this),  // The image
-				$caption    = $this.data('caption') ? $this.data('caption') : $this.attr('alt'),
-				$figure     = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent(),
-				$figcaption = $this.next('figcaption').html($caption);
+			    $caption    = $this.data('caption') ? $this.data('caption') : $this.attr('alt'),
+			    $figure     = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent(),
+			    $figcaption = $this.next('figcaption').html($caption);
 
 			// If no caption is supplied, just remove the figcaption.
 			if ($caption === '') $figcaption.remove();
@@ -57,7 +57,6 @@
 			{
 				$figure.addClass('stacked');
 				$figcaption.css({
-					'position': 'absolute',
 					'margin-bottom': '0',
 					'bottom': '0',
 				});
@@ -68,7 +67,6 @@
 			{
 				$figure.addClass('animated');
 				$figcaption.css({
-					'position': 'absolute',
 					'margin-bottom': '0',
 					'bottom': -$figcaption.outerHeight(),
 				});
@@ -79,7 +77,6 @@
 			{
 				$figure.addClass('hide');
 				$figcaption.css({
-					'position': 'absolute',
 					'margin-bottom': $figcaption.outerHeight(),
 					'bottom': -$figcaption.outerHeight(),
 				});

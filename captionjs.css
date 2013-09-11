@@ -1,27 +1,38 @@
-.captionjs, .captionjs figcaption {
+/*
+// caption.js styles
+*/
+
+/* Main */
+.captionjs {
 	line-height: 0;
 }
 .captionjs figcaption {
+	line-height: 1;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
 	-ms-box-sizing:     border-box;
 	-o-box-sizing:      border-box;
 	box-sizing:         border-box;
-
 	width: 100%;
 }
-
-.captionjs.stacked figcaption {
-	bottom: 0;
-}
-
 .captionjs.stacked,
 .captionjs.animated,
 .captionjs.hide {
 	position: relative;
 	overflow: hidden;
 }
+.captionjs.stacked figcaption,
+.captionjs.animated figcaption,
+.captionjs.hide figcaption {
+	position: absolute;
+}
 
+/* Stacked mode */
+.captionjs.stacked figcaption {
+	bottom: 0;
+}
+
+/* Animated mode */
 .captionjs.animated figcaption {
 	-webkit-transition: 0.25s bottom;
 	-moz-transition:    0.25s bottom;
@@ -33,6 +44,7 @@
 	bottom: 0 !important;
 }
 
+/* Hide mode */
 .captionjs.hide figcaption {
 	-webkit-transition: 0.25s margin-bottom;
 	-moz-transition:    0.25s margin-bottom;
