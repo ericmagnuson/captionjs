@@ -6,8 +6,8 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v0.9.4 ALPHA
- * Date: 2014-03-19
+ * v0.9.4
+ * Date: 2014-03-24
  */
 (function($, window, undefined){
 	$.fn.captionjs = function(opts){
