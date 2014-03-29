@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="site/scripts/syntaxhighlighter/styles/shCore.css"/>
 	<link rel="stylesheet" href="site/scripts/syntaxhighlighter/styles/shThemeDefault.css"/>
 	<link rel="stylesheet" href="site/styles/main.css"/>
+	<script type="text/javascript">document.documentElement.className+='js';</script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 	<script src="site/scripts/jquery.lettering.js" type="text/javascript"></script>
 	<script src="site/scripts/syntaxhighlighter/scripts/shCore.js" type="text/javascript"></script>
@@ -62,18 +63,23 @@
 	<!--///////////////////////////// Sample JS /////////////////////////////-->
 	<script type="text/javascript">
 		$(window).load(function(){
-			$('img#example-1').captionjs();
+			$('img#example-1').captionjs({
+				'force_dimensions': true
+			});
 
 			$('img#example-2').captionjs({
-				'mode' : 'stacked'
+				'force_dimensions': true,
+				'mode'            : 'stacked'
 			});
 
 			$('img#example-3').captionjs({
-				'mode' : 'hide'
+				'force_dimensions': true,
+				'mode'            : 'hide'
 			});
 
 			$('img#example-4').captionjs({
-				'mode' : 'animated'
+				'force_dimensions': true,
+				'mode'            : 'animated'
 			});
 		});
 	</script>

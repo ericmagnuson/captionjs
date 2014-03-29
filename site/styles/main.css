@@ -7,7 +7,12 @@ body {
 header, nav, article, footer, section, aside, figure, figcaption {display:block;}
 .l {float: left;}
 .r {float: right;}
-.js header, .js #github, .js nav, .js body > div, .js footer {
+.js header h1,
+.js header h2,
+.js #github,
+.js nav,
+.js body > div,
+.js footer {
 	display: none;
 }
 .wrapper {
