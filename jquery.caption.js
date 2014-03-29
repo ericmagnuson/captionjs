@@ -6,8 +6,8 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v0.9.4
- * Date: 2014-03-24
+ * v0.9.5
+ * Date: 2014-03-29
  */
 (function($, window, undefined){
 	$.fn.captionjs = function(opts){
@@ -43,7 +43,7 @@
 			if (options.debug_mode) console.log('caption.js | Caption: ' + $caption);
 
 			// Determine the appropriate dimensions for the figure, our top-most container for caption.js.
-			if (options.force_dimensions && ($this.outerWidth() === (undefined || 0)))
+			if (options.force_dimensions)
 			{
 				if (options.debug_mode) console.log('caption.js | Forcing dimensions with a clone.');
 
@@ -55,7 +55,7 @@
 				}).appendTo('body');
 
 				target_width = $('img', $clone).outerWidth(),
-				target_height = $('img', $clone).outerHeight();
+				target_height = $('figcaption', $clone).css('width', target_width).outerHeight(); // Make sure width (and thus line wrapping) is enforced so that the height is correct
 
 				$clone.remove();
 			}
