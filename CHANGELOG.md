@@ -1,3 +1,7 @@
+### v0.9.5 | 2014-03-29
+- Fixed sizing error
+- Always forcing dimensions if option is set (regardless of whether size can be detected)
+
 ### v0.9.4 | 2014-03-24
 - Fixed #5: error with images not yet having been painted to screen
 - Fixed dates in changelog
