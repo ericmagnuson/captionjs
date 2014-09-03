@@ -1,3 +1,6 @@
+### v0.9.6 | 2014-09-03
+- Adding options for responsive sites
+
 ### v0.9.5 | 2014-03-29
 - Fixed sizing error
 - Always forcing dimensions if option is set (regardless of whether size can be detected)

@@ -6,8 +6,8 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v0.9.5
- * Date: 2014-03-29
+ * v0.9.6
+ * Date: 2014-09-03
  */
 (function($, window, undefined){
 	$.fn.captionjs = function(opts){
@@ -20,7 +20,7 @@
 			'debug_mode'      : false,       // Output debug info to the JS console
 			'force_dimensions': false,       // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
 			'is_responsive'   : false        // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
-		}
+		};
 
 		// Extend the options from defaults with user's options
 		var options = $.extend(defaults, opts || {});
@@ -55,7 +55,7 @@
 					'left'    : '-9999px'
 				}).appendTo('body');
 
-				target_width = $('img', $clone).outerWidth(),
+				target_width = $('img', $clone).outerWidth();
 				target_height = $('figcaption', $clone).css('width', target_width).outerHeight(); // Make sure width (and thus line wrapping) is enforced so that the height is correct
 
 				$clone.remove();
