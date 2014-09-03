@@ -54,7 +54,7 @@
 					'left'    : '-9999px'
 				}).appendTo('body');
 
-				target_width = $('img', $clone).outerWidth(),
+				target_width = $('img', $clone).outerWidth();
 				target_height = $('figcaption', $clone).css('width', target_width).outerHeight(); // Make sure width (and thus line wrapping) is enforced so that the height is correct
 
 				$clone.remove();
