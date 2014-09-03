@@ -106,7 +106,7 @@
 	</nav>
 	<div class="wrapper">
 		<h2><a id="quick_start">Quick Start</a></h2>
-		<a href="http://captionjs.com/download" title="Download caption.js here!" id="download"><button>Download the latest version (v0.9.5)</button></a>
+		<a href="http://captionjs.com/download" title="Download caption.js here!" id="download"><button>Download the latest version (v0.9.6)</button></a>
 		<p>To begin, make sure you have jQuery included on your page. Next, download the script from above, upload it to your server, and link to it in the <code>&lt;head&gt;</code> section of your page (make sure you adjust the path according to where you uploaded the script on your server).</p>
 		<pre class="brush: html">
 &lt;script src=&quot;jquery.caption.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
@@ -138,11 +138,12 @@ $(window).load(function() {
 		'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
 		'mode'            : 'default',   // default | static | animated | hide
 		'debug_mode'      : false,       // Output debug info to the JS console
-		'force_dimensions': false        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+		'force_dimensions': false,       // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+		'is_responsive'   : false        // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
 	});
 });
 </pre>
-		<p>Since you&rsquo;ll probably like to customize the <code>&lt;figure&gt;</code> elements that caption.js generates, you can set a custom class for them (or just use the default <em>captionjs</em> class). caption.js also features four different modes, which are shown in the examples below. For diagnosing problems, a debug mode is available.  Finally, if you have images which are initially hidden when the page is loaded, set the <code>'force_dimensions'</code> option to <code>true</code> so that caption.js can correctly detect the size of your images.</p>
+		<p>Since you&rsquo;ll probably like to customize the <code>&lt;figure&gt;</code> elements that caption.js generates, you can set a custom class for them (or just use the default <em>captionjs</em> class). caption.js also features four different modes, which are shown in the examples below. For diagnosing problems, a debug mode is available.  If you have images which are initially hidden when the page is loaded, set the <code>'force_dimensions'</code> option to <code>true</code> so that caption.js can correctly detect the size of your images.  Finally, if you have a responsive site, enable <code>is_responsive</code> to ensure the figure will enlarge and shrink with your layout &mdash; just be sure to wrap the original image in a responsive container.</p>
 		<h2><a id="examples">Examples</a></h2>
 		<img id="example-1" class="caption" src="http://farm9.staticflickr.com/8378/8360655820_df685ca91e_c.jpg" data-caption="The busy Khao San Road in Bangkok, Thailand."/>
 		<p>The first example is the <em>default</em> mode, in which the caption sits below the image.</p>

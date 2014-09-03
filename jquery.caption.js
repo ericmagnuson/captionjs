@@ -6,8 +6,8 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v0.9.5
- * Date: 2014-03-29
+ * v0.9.6
+ * Date: 2014-09-03
  */
 (function($, window, undefined){
 	$.fn.captionjs = function(opts){
@@ -18,8 +18,9 @@
 			'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
 			'mode'            : 'default',   // default | static | animated | hide
 			'debug_mode'      : false,       // Output debug info to the JS console
-			'force_dimensions': false        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
-		}
+			'force_dimensions': false,       // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+			'is_responsive'   : false        // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
+		};
 
 		// Extend the options from defaults with user's options
 		var options = $.extend(defaults, opts || {});
@@ -63,6 +64,14 @@
 			{
 				target_width = $this.outerWidth();
 				target_height = $figcaption.outerHeight();
+			}
+
+			// If responsive, set widths across the board to 100%. We will rely on a
+			// responsive container to constrain the size of the image.
+			if (options.is_responsive)
+			{
+				target_width = '100%';
+				$this.width(target_width);
 			}
 
 			// Set the width of the figure.
