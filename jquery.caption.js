@@ -69,7 +69,7 @@
 			$figure.width(target_width);
 
 			// Schema markup if enabled
-			if (options.schema === true)
+			if (options.schema)
 			{
 				$figure.attr({
 					'itemscope': 'itemscope',
