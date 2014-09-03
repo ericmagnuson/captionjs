@@ -9,7 +9,8 @@ $(window).load(function() {
 		'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
 		'mode'            : 'default',   // default | static | animated | hide
 		'debug_mode'      : false,       // Output debug info to the JS console
-		'force_dimensions': false        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+		'force_dimensions': false,       // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+		'is_responsive'   : false        // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
     });
 });
 ```
