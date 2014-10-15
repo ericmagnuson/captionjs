@@ -1,3 +1,6 @@
+### v0.9.8 | 2014-10-15
+- Added links using the image's data-link attribute.
+
 ### v0.9.7 | 2014-10-13
 - Added option to inherit box model styles from the original image (still need to do padding).
 - Fixed incorrect documentation about 'stacked' mode (changed 'static' to 'stacked').
