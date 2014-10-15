@@ -1,3 +1,8 @@
+### v0.9.7 | 2014-10-13
+- Added option to inherit box model styles from the original image (still need to do padding).
+- Fixed incorrect documentation about 'stacked' mode (changed 'static' to 'stacked').
+- Changed some of the default settings (you may need to adjust yours accordingly!).
+
 ### v0.9.6 | 2014-09-03
 - Adding options for responsive sites
 
