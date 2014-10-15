@@ -57,6 +57,9 @@
 			color: #fff;
 			border: none;
 		}
+		.captionjs.default a {
+			color: #000;
+		}
 
 	</style>
 
@@ -123,7 +126,7 @@ $(window).load(function() {
 	$('img.caption').captionjs();
 });
 </pre>
-		<p>Whatever text you have in an image's <code>data-caption</code> attribute will be the text for the caption.js caption.  If no <code>data-caption</code> is set, caption.js will look for text in the image's <code>alt</code> text as a fallback.</p>
+		<p>Whatever text you have in an image's <code>data-caption</code> attribute will be the text for the caption.js caption.  If no <code>data-caption</code> is set, caption.js will look for text in the image's <code>alt</code> text as a fallback.  You can also turn the caption into a link by adding a <code>data-link</code> attribute to your image and inserting a fully qualified URL into it.</p>
 		<pre class="brush: html">
 &lt;img src=&quot;photo.jpg&quot; data-caption=&quot;A wonderful caption for the photo.&quot;/&gt;</pre>
 		<p>To customize caption.js, see the documentation section below.</p>
@@ -146,8 +149,8 @@ $(window).load(function() {
 </pre>
 		<p>Since you&rsquo;ll probably like to customize the <code>&lt;figure&gt;</code> elements that caption.js generates, you can set a custom class for them (or just use the default <code>.captionjs</code> class). caption.js also features four different modes, which are shown in the examples below. For diagnosing problems, a debug mode is available.  If you have images which are initially hidden when the page is loaded (or if you're experiencing weird behaviors/sizing with the captions), set the <code>'force_dimensions'</code> option to <code>true</code> so that caption.js can correctly detect the size of your images.  If you have a responsive site, enable <code>is_responsive</code> to ensure the figure will enlarge and shrink with your layout &mdash; just be sure to wrap the original image in a responsive container. Finally, the <code>inherit_styles</code> property will attempt to copy any box model properties from your original image to the caption.js container (that way you don't have to add any addition styles yourself).</p>
 		<h2><a id="examples">Examples</a></h2>
-		<img id="example-1" class="caption" src="http://farm9.staticflickr.com/8378/8360655820_df685ca91e_c.jpg" data-caption="The busy Khao San Road in Bangkok, Thailand."/>
-		<p>The first example is the <em>default</em> mode, in which the caption sits below the image.</p>
+		<img id="example-1" class="caption" src="http://farm9.staticflickr.com/8378/8360655820_df685ca91e_c.jpg" data-caption="The busy Khao San Road in Bangkok, Thailand." data-link="http://www.flickr.com/photos/esm723/8360655820"/>
+		<p>The first example is the <em>default</em> mode, in which the caption sits below the image.  There is also a link added to the caption using the image&rsuo; <code>data-link</code> attribute.</p>
 		<img id="example-2" class="caption" src="http://farm9.staticflickr.com/8497/8360650488_12afeb2af7_c.jpg" data-caption="A bridge spanning a canal just west of Bangkok&rsquo;s Hua Lamphong Railway Station."/>
 		<p>The second example shows how captions can be stacked on top of the image using the <em>stacked</em> mode.</p>
 		<img id="example-3" class="caption" src="http://farm9.staticflickr.com/8362/8359588651_2ba0f7c6a4_c.jpg" data-caption="A monk passing the time on a bench in Sanam Luang, a plaza next to the Grand Palace in Bangkok, Thailand that was once used for royal ceremonies."/>
