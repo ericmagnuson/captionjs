@@ -134,16 +134,17 @@ $(window).load(function() {
 		<pre class="brush: js">
 $(window).load(function() {
 	$('img.caption').captionjs({
-		'class_name'      : 'captionjs', // Class name assigned to each &lt;figure&gt;
+		'class_name'      : 'captionjs', // Class name for each &lt;figure&gt;
 		'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
-		'mode'            : 'default',   // default | static | animated | hide
+		'mode'            : 'default',   // default | stacked | animated | hide
 		'debug_mode'      : false,       // Output debug info to the JS console
-		'force_dimensions': false,       // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
-		'is_responsive'   : false        // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
+		'force_dimensions': true,        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
+		'is_responsive'   : false,       // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
+		'inherit_styles'  : false        // Have the caption.js container inherit box-model properties from the original image
 	});
 });
 </pre>
-		<p>Since you&rsquo;ll probably like to customize the <code>&lt;figure&gt;</code> elements that caption.js generates, you can set a custom class for them (or just use the default <em>captionjs</em> class). caption.js also features four different modes, which are shown in the examples below. For diagnosing problems, a debug mode is available.  If you have images which are initially hidden when the page is loaded, set the <code>'force_dimensions'</code> option to <code>true</code> so that caption.js can correctly detect the size of your images.  Finally, if you have a responsive site, enable <code>is_responsive</code> to ensure the figure will enlarge and shrink with your layout &mdash; just be sure to wrap the original image in a responsive container.</p>
+		<p>Since you&rsquo;ll probably like to customize the <code>&lt;figure&gt;</code> elements that caption.js generates, you can set a custom class for them (or just use the default <code>.captionjs</code> class). caption.js also features four different modes, which are shown in the examples below. For diagnosing problems, a debug mode is available.  If you have images which are initially hidden when the page is loaded (or if you're experiencing weird behaviors/sizing with the captions), set the <code>'force_dimensions'</code> option to <code>true</code> so that caption.js can correctly detect the size of your images.  If you have a responsive site, enable <code>is_responsive</code> to ensure the figure will enlarge and shrink with your layout &mdash; just be sure to wrap the original image in a responsive container. Finally, the <code>inherit_styles</code> property will attempt to copy any box model properties from your original image to the caption.js container (that way you don't have to add any addition styles yourself).</p>
 		<h2><a id="examples">Examples</a></h2>
 		<img id="example-1" class="caption" src="http://farm9.staticflickr.com/8378/8360655820_df685ca91e_c.jpg" data-caption="The busy Khao San Road in Bangkok, Thailand."/>
 		<p>The first example is the <em>default</em> mode, in which the caption sits below the image.</p>
@@ -154,7 +155,7 @@ $(window).load(function() {
 		<img id="example-4" class="caption" src="http://farm3.staticflickr.com/2453/3725143668_c5f2500443_b.jpg" alt="Two climbers in the Bernese Alps of Switzerland stand on a precipice across from a large mountain peak shrouded in clouds called the Mönch."/>
 		<p>The last mode, <em>animated</em>, features an animated caption that appears when the user hovers over the image.  Also, in this example, the caption text comes from the image's <code>alt</code> text rather than its <code>data-caption</code> attribute, as is the case for the other examples.</p>
 		<h2><a id="contribute">Contribute</a></h2>
-		<p>Want to help build out caption.js? Come on by on our <a href="http://github.com/ericmagnuson/captionjs" title="Fork us on Github">Github project page</a>. If you have an update you'd like to see implemented, just send a pull request.</p>
+		<p>Want to help build out caption.js? Come on by on our <a href="http://github.com/ericmagnuson/captionjs" title="Fork us on Github">Github project page</a>. If you have an update you'd like to see implemented, just send a pull request or get in touch via <a href="http://twitter.com/captionjs" title="Visit caption.js' Twitter">Twitter</a>.</p>
 	</div>
 	<footer class="wrapper">
 		<p>by <a href="http://twitter.com/ericmagnuson" title="Visit Eric's Twitter">@ericmagnuson</a> | For questions and updates, find <a href="http://twitter.com/captionjs" title="Visit caption.js' Twitter">@captionjs</a> on Twitter.</p>

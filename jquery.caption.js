@@ -14,13 +14,13 @@
 
 		// Default values for options
 		var defaults = {
-			'class_name'      : 'captionjs', // Class name assigned to each <figure>
+			'class_name'      : 'captionjs', // Class name for each <figure>
 			'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
 			'mode'            : 'default',   // default | stacked | animated | hide
 			'debug_mode'      : false,       // Output debug info to the JS console
 			'force_dimensions': true,        // Force the dimensions in case they can't be detected (e.g., image is not yet painted to viewport)
 			'is_responsive'   : false,       // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
-			'inherit_styles'  : true         // Have the caption.js container inherit all box-model styles from the original image
+			'inherit_styles'  : false        // Have the caption.js container inherit box-model properties from the original image
 		};
 
 		// Extend the options from defaults with user's options
