@@ -43,8 +43,9 @@
 			// Form basic structures and assign vars
 			var $this       = $(this),  // The image
 				$caption    = $this.data('caption') ? $this.data('caption') : $this.attr('alt'),
-				$figure     = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent(),
+				$figure     = $this.wrap('<figure class="' + options.class_name + ' ' + options.mode + '"/>').after('<figcaption/>').parent(),
 				$figcaption = $this.next('figcaption').html($caption),
+				$link       = $this.data('link') ? $figcaption.wrapInner('<a href="' + $this.data('link') + '"/>').children('a').css('padding', '0').css('margin', '0') : null,
 				target_width,
 				target_height;
 
@@ -99,7 +100,7 @@
 				transferStyles('clear', 'both', $figure, $this);
 				transferStyles('float', 'none', $figure, $this);
 				transferStyles('margin', '0', $figure, $this);
-				// transferStyles('padding', '0', $figure, $this);
+				// transferStyles('padding', '0', $figure, $this); // Finish this
 				$this.css('padding', '0');
 				transferStyles('left', 'auto', $figure, $this);
 				transferStyles('right', 'auto', $figure, $this);
@@ -125,7 +126,6 @@
 			// Stacked mode
 			if (options.mode === 'stacked')
 			{
-				$figure.addClass('stacked');
 				$figcaption.css({
 					'margin-bottom': '0',
 					'bottom': '0',
@@ -135,7 +135,6 @@
 			// Animated mode
 			if (options.mode === 'animated')
 			{
-				$figure.addClass('animated');
 				$figcaption.css({
 					'margin-bottom': '0',
 					'bottom': -target_height,
@@ -145,7 +144,6 @@
 			// Hide mode
 			if (options.mode === 'hide')
 			{
-				$figure.addClass('hide');
 				$figcaption.css({
 					'margin-bottom': target_height,
 					'bottom': -target_height,
