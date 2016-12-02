@@ -6,13 +6,13 @@
 	<meta name="description" content="An open-source jQuery plugin to easily and semantically add captions to images."/>
 	<link rel="icon" type="image/png" href="site/favicon.png"/>
 	<!--[if IE]><script src="//html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script><![endif]-->
-	<link rel="stylesheet" href="//yui.yahooapis.com/3.5.0/build/cssreset/reset-min.css" media="screen"/>
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Abril+Fatface"/>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/3.5.0/build/cssreset/reset-min.css" media="screen"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic|Abril+Fatface"/>
 	<link rel="stylesheet" href="site/scripts/syntaxhighlighter/styles/shCore.css"/>
 	<link rel="stylesheet" href="site/scripts/syntaxhighlighter/styles/shThemeDefault.css"/>
 	<link rel="stylesheet" href="site/styles/main.css"/>
 	<script type="text/javascript">document.documentElement.className+='js';</script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 	<script src="site/scripts/jquery.lettering.js" type="text/javascript"></script>
 	<script src="site/scripts/syntaxhighlighter/scripts/shCore.min.js" type="text/javascript"></script>
 	<script src="site/scripts/syntaxhighlighter/scripts/shAutoloader.js" type="text/javascript"></script>
@@ -84,6 +84,12 @@
 				'force_dimensions': true,
 				'mode'            : 'animated'
 			});
+
+			$('img#example-5').captionjs({
+				'force_dimensions': true,
+				'is_responsive'   : true,
+				'mode'            : 'animated'
+			});
 		});
 	</script>
 </head>
@@ -147,7 +153,7 @@ $(window).load(function() {
 	});
 });
 </pre>
-		<p>Since you&rsquo;ll probably like to customize the <code>&lt;figure&gt;</code> elements that caption.js generates, you can set a custom class for them (or just use the default <code>.captionjs</code> class). caption.js also features four different modes, which are shown in the examples below. For diagnosing problems, a debug mode is available.  If you have images which are initially hidden when the page is loaded (or if you're experiencing weird behaviors/sizing with the captions), set the <code>'force_dimensions'</code> option to <code>true</code> so that caption.js can correctly detect the size of your images.  If you have a responsive site, enable <code>is_responsive</code> to ensure the figure will enlarge and shrink with your layout &mdash; just be sure to wrap the original image in a responsive container. Finally, the <code>inherit_styles</code> property will attempt to copy any box model properties from your original image to the caption.js container (that way you don't have to add any addition styles yourself).</p>
+		<p>Since you&rsquo;ll probably like to customize the <code>&lt;figure&gt;</code> elements that caption.js generates, you can set a custom class for them (or just use the default <code>.captionjs</code> class). caption.js also features four different modes, which are shown in the examples below. For diagnosing problems, a debug mode is available.  If you have images which are initially hidden when the page is loaded (or if you're experiencing weird behaviors/sizing with the captions), set the <code>'force_dimensions'</code> option to <code>true</code> so that caption.js can correctly detect the size of your images.  If you have a responsive site, enable <code>'is_responsive'</code> to ensure the figure will enlarge and shrink with your layout &mdash; just be sure to wrap the original image in a responsive container. Finally, the <code>inherit_styles</code> property will attempt to copy any box model properties from your original image to the caption.js container (that way you don't have to add any addition styles yourself).</p>
 		<h2><a id="examples">Examples</a></h2>
 		<img id="example-1" class="caption" src="https://farm9.staticflickr.com/8378/8360655820_df685ca91e_c.jpg" data-caption="The busy Khao San Road in Bangkok, Thailand." data-link="https://www.flickr.com/photos/esm723/8360655820"/>
 		<p>The first example is the <em>default</em> mode, in which the caption sits below the image.  There is also a link added to the caption using the image&rsuo; <code>data-link</code> attribute.</p>
@@ -157,6 +163,12 @@ $(window).load(function() {
 		<p>The third mode, <em>hide</em>, has a caption that slides down when a user hovers over the photo, allowing the image to be seen unobscured.</p>
 		<img id="example-4" class="caption" src="https://farm3.staticflickr.com/2453/3725143668_c5f2500443_b.jpg" alt="Two climbers in the Bernese Alps of Switzerland stand on a precipice across from a large mountain peak shrouded in clouds called the Mönch."/>
 		<p>The last mode, <em>animated</em>, features an animated caption that appears when the user hovers over the image.  Also, in this example, the caption text comes from the image's <code>alt</code> text rather than its <code>data-caption</code> attribute, as is the case for the other examples.</p>
+		<p>If you&rsquo;re using caption.js in a responsive setting, be sure to enable the <code>is_responsive</code> setting, and make sure your original image is wrapped in a responsive container (in other words, the direct parent container should be responsive, or have a variable width).  See below for an example.</p>
+</div>
+<div style="width: 100%">
+	<img id="example-5" class="caption" src="site/img/Evening_Return-wide.jpg" alt="View of Koh Phi Phi Leh at sunset during the return trip home."/>
+</div>
+<div class="wrapper">
 		<h2><a id="contribute">Contribute</a></h2>
 		<p>Want to help build out caption.js? Come on by on our <a href="https://github.com/ericmagnuson/captionjs" title="Fork us on Github">Github project page</a>. If you have an update you'd like to see implemented, just send a pull request or get in touch via <a href="https://twitter.com/captionjs" title="Visit caption.js' Twitter">Twitter</a>.</p>
 	</div>

@@ -33,12 +33,12 @@ $(document).ready(function() {
 			if (top > x_coord - 1)
 			{
 				$('nav').addClass('sticky');
-				$('body > div').css('padding-top', padding_to_add + 'px');
+				$('body > div:first-of-type').css('padding-top', padding_to_add + 'px');
 			}
 			else
 			{
 				$('nav').removeClass('sticky');
-				$('body > div').css('padding-top', '0');
+				$('body > div:first-of-type').css('padding-top', '0');
 			}
 		})
 	};
