@@ -1,3 +1,6 @@
+### v0.9.9 | 2016-12-16
+- Bumping version for NPM release.
+
 ### v0.9.8 | 2014-10-15
 - Added links using the image's data-link attribute.
 
