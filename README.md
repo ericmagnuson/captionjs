@@ -1,5 +1,8 @@
 ## Documentation
 
+Install using NPM:
+`npm install --save captionjs`
+
 Below is the basic setup for caption.js.  For more info, please see [captionjs.com](http://captionjs.com).
 
 ```js
