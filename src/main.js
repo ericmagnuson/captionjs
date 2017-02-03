@@ -1,6 +1,6 @@
 /*!
  * caption.js | easily and semantically add captions to your images
- * http://captionjs.com
+ * https://captionjs.com
  *
  * Copyright 2013–2017, Eric Magnuson
  * Released under the MIT license
@@ -134,7 +134,7 @@
 			{
 				$figcaption.css({
 					'margin-bottom': '0',
-					'bottom': '0',
+					'bottom': '0'
 				});
 			}
 
@@ -143,7 +143,7 @@
 			{
 				$figcaption.css({
 					'margin-bottom': '0',
-					'bottom': -target_height,
+					'bottom': -target_height
 				});
 			}
 
@@ -152,7 +152,32 @@
 			{
 				$figcaption.css({
 					'margin-bottom': target_height,
-					'bottom': -target_height,
+					'bottom': -target_height
+				});
+			}
+
+			// When window resizes, update all the figcaption values if responsive.
+			if (options.is_responsive)
+			{
+				$(window).resize(function(event) {
+
+					target_height = $figcaption.outerHeight();
+
+					if (options.mode === 'animated')
+					{
+						$figcaption.css({
+							'bottom': -target_height
+						});
+					}
+
+					if (options.mode === 'hidden')
+					{
+						$figcaption.css({
+							'margin-bottom': target_height,
+							'bottom': -target_height
+						});
+					}
+
 				});
 			}
 
