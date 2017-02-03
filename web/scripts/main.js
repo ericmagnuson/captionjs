@@ -5,6 +5,7 @@ $(document).ready(function() {
 			'html xml web/scripts/syntaxhighlighter/scripts/shBrushXml.js',
 			'css web/scripts/syntaxhighlighter/scripts/shBrushCss.js'
 	);
+	SyntaxHighlighter.defaults.gutter = false;
 	SyntaxHighlighter.all();
 
 	// Init scrollTo

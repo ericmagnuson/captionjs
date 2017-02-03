@@ -6,8 +6,8 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v0.9.9
- * Date: 2016-12-16
+ * v1.0.0
+ * Date: 2017-02-03
  */
 (function($, window, undefined) {
 	$.fn.captionjs = function(opts) {
@@ -16,7 +16,7 @@
 		var defaults = {
 			'class_name'      : 'captionjs', // Class name for each <figure>
 			'schema'          : true,        // Use schema.org markup (i.e., itemtype, itemprop)
-			'mode'            : 'default',   // default | stacked | animated | hide
+			'mode'            : 'default',   // default | stacked | animated | hidden (deprecated: hide)
 			'debug_mode'      : false,       // Output debug info to the JS console
 			'force_dimensions': true,        // Force the dimensions in case they cannot be detected (e.g., image is not yet painted to viewport)
 			'is_responsive'   : false,       // Ensure the figure and image change size when in responsive layout. Requires a container to control responsiveness!
@@ -43,11 +43,17 @@
 			// Form basic structures and assign vars
 			var $this       = $(this),  // The image
 				$caption    = $this.data('caption') ? $this.data('caption') : $this.attr('alt'),
-				$figure     = $this.wrap('<figure class="' + options.class_name + ' ' + options.mode + '"/>').after('<figcaption/>').parent(),
+				$figure     = $this.wrap('<figure class="' + options.class_name + ' ' + options.class_name + '-' + options.mode + '"/>').after('<figcaption/>').parent(),
 				$figcaption = $this.next('figcaption').html($caption),
 				$link       = $this.data('link') ? $figcaption.wrapInner('<a href="' + $this.data('link') + '"/>').children('a').css('padding', '0').css('margin', '0') : null,
 				target_width,
 				target_height;
+
+			// Fallback for name change of hide to hidden
+			if (options.mode === 'hide')
+			{
+				options.mode = 'hidden';
+			}
 
 			// If no caption is supplied, just remove the figcaption.
 			if ($caption === '') $figcaption.remove();
@@ -100,7 +106,7 @@
 				transferStyles('clear', 'both', $figure, $this);
 				transferStyles('float', 'none', $figure, $this);
 				transferStyles('margin', '0', $figure, $this);
-				// transferStyles('padding', '0', $figure, $this); // Finish this
+				// transferStyles('padding', '0', $figure, $this); // @todo
 				$this.css('padding', '0');
 				transferStyles('left', 'auto', $figure, $this);
 				transferStyles('right', 'auto', $figure, $this);
@@ -141,8 +147,8 @@
 				});
 			}
 
-			// Hide mode
-			if (options.mode === 'hide')
+			// Hidden mode
+			if (options.mode === 'hidden')
 			{
 				$figcaption.css({
 					'margin-bottom': target_height,

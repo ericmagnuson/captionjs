@@ -15,43 +15,43 @@
 	box-sizing:         border-box;
 	width: 100%;
 }
-.captionjs.stacked,
-.captionjs.animated,
-.captionjs.hide {
+.captionjs.captionjs-stacked,
+.captionjs.captionjs-animated,
+.captionjs.captionjs-hidden {
 	position: relative;
 	overflow: hidden;
 }
-.captionjs.stacked figcaption,
-.captionjs.animated figcaption,
-.captionjs.hide figcaption {
+.captionjs.captionjs-stacked figcaption,
+.captionjs.captionjs-animated figcaption,
+.captionjs.captionjs-hidden figcaption {
 	position: absolute;
 }
 
 /* Stacked mode */
-.captionjs.stacked figcaption {
+.captionjs.captionjs-stacked figcaption {
 	bottom: 0;
 }
 
 /* Animated mode */
-.captionjs.animated figcaption {
+.captionjs.captionjs-animated figcaption {
 	-webkit-transition: 0.25s bottom;
 	-moz-transition:    0.25s bottom;
 	-ms-transition:     0.25s bottom;
 	-o-transition:      0.25s bottom;
 	transition:         0.25s bottom;
 }
-.captionjs.animated:hover figcaption {
+.captionjs.captionjs-animated:hover figcaption {
 	bottom: 0 !important;
 }
 
 /* Hide mode */
-.captionjs.hide figcaption {
+.captionjs.captionjs-hidden figcaption {
 	-webkit-transition: 0.25s margin-bottom;
 	-moz-transition:    0.25s margin-bottom;
 	-ms-transition:     0.25s margin-bottom;
 	-o-transition:      0.25s margin-bottom;
 	transition:         0.25s margin-bottom;
 }
-.captionjs.hide:hover figcaption {
+.captionjs.captionjs-hidden:hover figcaption {
 	margin-bottom: 0 !important;
 }
