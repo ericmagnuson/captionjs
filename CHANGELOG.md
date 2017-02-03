@@ -1,3 +1,6 @@
+### v1.0.2 | 2017-02-03
+- Bumping version because I forgot to compile before publishing. D'oh! :(
+
 ### v1.0.1 | 2017-02-03
 - Resetting figcaption values on window resize if 'is_responsive' is enabled.
 
