@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	// Init SyntaxHighlighter
 	SyntaxHighlighter.autoloader(
-			'js jscript javascript site/scripts/syntaxhighlighter/scripts/shBrushJScript.js',
-			'html xml site/scripts/syntaxhighlighter/scripts/shBrushXml.js',
-			'css site/scripts/syntaxhighlighter/scripts/shBrushCss.js'
+			'js jscript javascript web/scripts/syntaxhighlighter/scripts/shBrushJScript.js',
+			'html xml web/scripts/syntaxhighlighter/scripts/shBrushXml.js',
+			'css web/scripts/syntaxhighlighter/scripts/shBrushCss.js'
 	);
 	SyntaxHighlighter.all();
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 				$('nav').removeClass('sticky');
 				$('body > div:first-of-type').css('padding-top', '0');
 			}
-		})
+		});
 	};
 
 	// Fade in content
