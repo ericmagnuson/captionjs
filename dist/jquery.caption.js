@@ -6,7 +6,7 @@
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
- * v1.0.0
+ * v1.0.1
  * Date: 2017-02-03
  */
 (function($, window, undefined) {
@@ -159,8 +159,6 @@
 			// When window resizes, update all the figcaption values if responsive.
 			if (options.is_responsive)
 			{
-				$figure.addClass(options.class_name + '-responsive');
-
 				$(window).resize(function(event) {
 
 					target_height = $figcaption.outerHeight();
@@ -180,9 +178,6 @@
 						});
 					}
 
-					// $.each($(options.class_name + '-responsive'), function(index, element) {
-					// 	var target_height = $(this).outerHeight();
-					// });
 				});
 			}
 
