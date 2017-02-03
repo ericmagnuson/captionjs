@@ -2,15 +2,15 @@
  * caption.js | easily and semantically add captions to your images
  * http://captionjs.com
  *
- * Copyright 2013-2014, Eric Magnuson
+ * Copyright 2013–2017, Eric Magnuson
  * Released under the MIT license
  * https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt
  *
  * v0.9.9
  * Date: 2016-12-16
  */
-(function($, window, undefined){
-	$.fn.captionjs = function(opts){
+(function($, window, undefined) {
+	$.fn.captionjs = function(opts) {
 
 		// Default values for options
 		var defaults = {
@@ -27,7 +27,7 @@
 		var options = $.extend(defaults, opts || {});
 
 		// Function to copy styles
-		var transferStyles = function(property, reset_val, $origin, $target){
+		var transferStyles = function(property, reset_val, $origin, $target) {
 			if ($origin.jquery && $target.jquery) // Check that they are jQuery objects
 			{
 				$origin.css(property, $target.css(property));
@@ -36,9 +36,9 @@
 		};
 
 		// jQuery chainability -- do the magic below
-		return this.each(function(){
+		return this.each(function() {
 
-			if (options.debug_mode) console.log('caption.js | Starting.');
+			if (options.debug_mode) console.debug('caption.js | Starting.');
 
 			// Form basic structures and assign vars
 			var $this       = $(this),  // The image
@@ -52,12 +52,12 @@
 			// If no caption is supplied, just remove the figcaption.
 			if ($caption === '') $figcaption.remove();
 
-			if (options.debug_mode) console.log('caption.js | Caption: ' + $caption);
+			if (options.debug_mode) console.debug('caption.js | Caption: ' + $caption);
 
 			// Determine the appropriate dimensions for the figure, our top-most container for caption.js.
 			if (options.force_dimensions)
 			{
-				if (options.debug_mode) console.log('caption.js | Forcing dimensions with a clone.');
+				if (options.debug_mode) console.debug('caption.js | Forcing dimensions with a clone.');
 
 				// Create a clone outside of the viewport to detect and then set the dimensions.
 				var $clone = $figure.clone().css({
