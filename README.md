@@ -2,8 +2,14 @@
 
 Install using NPM:
 
-```js
+```bash
 npm install --save captionjs
+```
+
+Install using Bower:
+
+```bash
+bower install captionjs
 ```
 
 Below is the basic setup for caption.js.  For more info, please see [captionjs.com](http://captionjs.com).
