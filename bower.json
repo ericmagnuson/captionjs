@@ -1,0 +1,17 @@
+{
+  "name": "captionjs",
+  "description": "An open-source jQuery plugin to easily and semantically add captions to images.",
+  "main": "",
+  "authors": [
+    "Eric Magnuson <eric@ericmagnuson.me>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ericmagnuson/captionjs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
